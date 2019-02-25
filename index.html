@@ -3,23 +3,21 @@
     <head>
         <meta charset="utf-8">
         <title>oscardavis.co.uk</title>
-        <style>
-            *{
-                margin:auto;
-            }
-
-            html, body{
-                background-color: #FFFFFF;
-                text-align:center;
-                cursor: url(resources/faceBW.png), auto;
-            }
-        </style>
+        <link rel="stylesheet" href="index.css">
         <link rel="shortcut icon" type="image/png" href="resources/faceBW.png"/>
         <script src="p5.min.js"></script>
         <script src="addons/p5.dom.min.js"></script>
         <script src="addons/p5.sound.min.js"></script>
+        <script src="XYORGAN.js"></script>
     </head>
     <body>
-        <div><script src="XYORGAN.js"></script></div>
+        <div class="foreground">
+          <button class='button' id='button1' type="button" onclick="alert('this will lead to live sound portfolio')">live sound</button>
+          <button class='button' id='button2' type="button" onclick="alert('this will lead to sound design portfolio')">sound design</button>
+          <button class='button' id='button3' type="button" onclick="alert('this will lead to coding portfolio')">coding</button>
+          <button class='button' id='button4' type="button" onclick="alert('this will lead to contact page')">contact</button>
+          <h1 id='title'>oscardavis.co.uk ∿ </h1>
+          <div><script src="index.js"></script></div>
+        </div>
     </body>
 </html>

@@ -1,3 +1,73 @@
-testing
+*{
+    margin:auto;
+}
 
-testing 123
+html, body{
+    background-color: #FFFFFF;
+}
+
+.foreground{
+  position: absolute;
+  z-index: 1;
+  height: 10vh;
+  width: 100vw;
+  background-color: none;
+  display: grid;
+  grid-template-areas: 	"button1 button2 button3 button4 title";
+	grid-template-columns: 25% 2;
+	grid-gap: 0px;
+	margin: auto;
+  justify-content: stretch;
+}
+
+#button1{
+  grid-area: "button1";
+}
+
+#button2{
+  grid-area: "button2";
+}
+
+#button3{
+  grid-area: "button3";
+}
+
+#button4{
+  grid-area: "button4";
+}
+
+#title{
+  height: 100%;
+  width:100%;
+  display:block;
+  text-align: right;
+  grid-area: "title";
+  color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 48px;
+  font-style: oblique;
+  font-weight: bold;
+
+}
+.button {
+  height: 100%;
+  width:100%;
+  display:block;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: (255, 255, 255);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#title:hover{
+  background-color: (255, 255, 255);
+  color: rgba(0, 0, 0, 0.5);
+}

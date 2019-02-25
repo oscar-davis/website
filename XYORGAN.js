@@ -1,10 +1,12 @@
-
+var canvas;
 var x;
 var Row = [];
 
 var colour0;
 function setup(){
-    createCanvas(windowWidth, windowHeight);
+    canvas = createCanvas(windowWidth, windowHeight);
+    canvas.position(0,0);
+    canvas.style('z-index','-1');
     x = width;
     frameRate();
     for(i=0;i<35;i++){
@@ -35,11 +37,11 @@ function draw(){
     //text('info@oscardavis.co.uk ∿    +44(0)7806 547 799 ∿   ',70,63+70);
 //    text('∿ +44(0)7806 547 799',70,126+75+140);
 
-    fill(255);
-    textAlign(RIGHT);
-    textSize(35);
-    textStyle(BOLD);
-    text('OSCARDAVIS.CO.UK ∿',width-70,63);
+    // fill(255);
+    // textAlign(RIGHT);
+    // textSize(35);
+    // textStyle(BOLD);
+    // text('OSCARDAVIS.CO.UK ∿',width-70,63);
 }
 
 function createRow(x,y,d,c,inc,s,indMax,freq){
