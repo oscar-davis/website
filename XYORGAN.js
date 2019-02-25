@@ -1,3 +1,4 @@
+
 var x;
 var Row = [];
 
@@ -8,22 +9,21 @@ function setup(){
     frameRate();
     for(i=0;i<35;i++){
         var rando = random(255);
-        var indMax = map(rando,0,255,0,1);
+        var indMax = map(rando,0,255,1,3);
         var x = random(0,width);
         var d = map(rando, 0, 255, 15, 200);
-        var c = color(map(rando, 0, 255, 255, 0),map(rando, 0, 255, 255, 0),map(rando, 0, 255, 0, 255),200);
+        var c = color(random(255),random(255),random(255),200);
         var inc = -1;
-        var s = 100;
-        var freq = map(rando, 0, 255, 70, 1500);
+        var s = 50;
+        var freq = map(rando, 0, 255, 70, 600);
         var newRow = new createRow(x,(i*35)+15,d,c,inc,s,indMax,freq);
         Row.push(newRow);
     }
-    colour0 = color(random(255),random(255),random(255));
 }
 
 function draw(){
-    background(255,255,255,5);
-    for(i=0;i<5;i++){
+    background(255,255,255,20);
+    for(i=0;i<15;i++){
         Row[i].animate();
         Row[i].show();
     }
@@ -40,8 +40,6 @@ function draw(){
     textSize(35);
     textStyle(BOLD);
     text('OSCARDAVIS.CO.UK ∿',width-70,63);
-
-
 }
 
 function createRow(x,y,d,c,inc,s,indMax,freq){
@@ -74,6 +72,7 @@ function createRow(x,y,d,c,inc,s,indMax,freq){
             else if(this.y<(-this.d/2)){
                 this.incY = this.incY*-1;
                 this.osc.start();
+                this.osc.amp(0.2);
             }
             this.index = 0;
         }
