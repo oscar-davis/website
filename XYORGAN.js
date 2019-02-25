@@ -56,7 +56,7 @@ function createRow(rando,x,y,d,c,inc,s,indMax,freq){
     this.index = 0;
     this.indexMax = indMax;
     this.osc = new p5.Oscillator(freq,'sine');
-    this.env = new p5.Envelope(0.1,0.25,map(rando,0,255,4,0.5),0,1,0);
+    this.env = new p5.Envelope(0.1,0.25,map(rando,0,255,4,0.5),0.1,1,0);
     this.osc.amp(this.env);
     this.osc.start();
 
