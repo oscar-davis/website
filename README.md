@@ -1,10 +1,16 @@
 # website
+- Pure Data
+  - train sounds
+  - meditiation things
 
-GIGS:
-- decolonise fest
-- orb
-- decales
-- savage
-- ancq
-- redgates
-- howl
+- Preact
+  - Wavr
+
+- React
+  - Spotify
+
+- Javascript
+  - Fare Hopper
+
+- Live Sound
+  - collage of pics
