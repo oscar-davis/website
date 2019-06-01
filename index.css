@@ -6,39 +6,6 @@ html, body{
   margin:auto;
 }
 
-.foreground{
-  position: fixed;
-  z-index: 1;
-  height: 10vh;
-  width: 100vw;
-  display: grid;
-  grid-template-areas: 	"button1 button2 button3 button4 button5";
-	grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: auto;
-	grid-gap: 0px;
-  justify-content: stretch;
-}
-
-#button1{
-  grid-area: "button1";
-}
-
-#button2{
-  grid-area: "button2";
-}
-
-#button3{
-  grid-area: "button3";
-}
-
-#button4{
-  grid-area: "button4";
-}
-
-#button5{
-  grid-area: "button5";
-}
-
 .button {
   height: 100%;
   width:100%;
