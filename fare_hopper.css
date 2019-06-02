@@ -1,0 +1,18 @@
+
+*{
+    margin:16px auto;
+}
+
+html, body{
+    text-align:center;
+    width: 100%;
+}
+
+body {
+    background-color: dodgerblue;
+
+}
+
+html{
+    background-color: dodgerblue;
+}

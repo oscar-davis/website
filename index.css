@@ -1,39 +1,98 @@
+:root {
+    --red: #ff5454; /* powder red */
+    --blue: #84ceff; /* powder blue */
+}
+
 *{
-  margin:auto;
+    	 margin:0px auto;
 }
 
 html, body{
-  margin:auto;
+    width: 100%;
+    text-align:center;
 }
 
-.foreground {
-  position: absolute;	  position: fixed;
-  z-index: 1;	  z-index: 1;
-  height: 10vh;	  height: 10vh;
-  width: 100vw;	  width: 100vw;
-  display: grid;	  display: grid;
-  grid-template-areas: 	"button1 button2 button3 button4 button5";	  grid-template-areas: 	"button1 button2 button3 button4 button5";
-	grid-template-columns: 20% 20% 20% 20% 20%;		grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: auto;
-	grid-gap: 0px;		grid-gap: 0px;
-	margin: auto;	
-  justify-content: stretch;	  justify-content: stretch;
+#header{
+    background-color: var(--blue);
+    text-align: right;
+    padding: 20px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+	left: 0;
+    z-index: 1;
+    border-bottom-style: solid;
+    border-bottom-color: var(--red);
+    border-bottom-width: 4.6px;
+
+}
+    .heading{
+        display: inline;
+        margin: 20px;
+        cursor: pointer;
+    }
+    #logo{
+        height:35px;
+        width:auto;
+        padding-right:50%;
+        z-index: 2;
+    }
+
+
+#mainPhoto{
+    background-color: var(--red);
+    width: 100%;
+    padding:0px;
+
+}
+    #text{
+        position: absolute;
+        bottom:20%;
+        left: 47%;
+        color: white;
+        font-size: 30px;
+    }
+        #title{
+            color:var(--red);
+            font-style: oblique;
+            font-weight: bold;
+            font-size: 35px;
+        }
+#face{
+    width: 100%;
+    z-index: -1;
 }
 
-.button {
-  height: 100%;
-  width:100%;
-  display:block;
-  border: none;
-  background-color: rgba(0,0,0,0.5);
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  cursor: pointer;
+#bio{
+    background-color: var(--blue);
+    padding: 50px;
+    font-size: 28px;
+    color: white;
+    border-bottom-style: solid;
+    border-bottom-color: var(--red);
+    border-bottom-width: 4.6px;
 }
 
-.button:hover {
-  background-color: rgba(255, 255, 255,0);
-  color: #323232;
+#media{
+    background-color: white;
+}
+
+    .video{
+        padding: 30px;
+    }
+
+#footer{
+    background-color: white;
+    font-size: 23px;
+    color: var(--blue);
+    padding-top:70px;
+    padding-bottom:20px;
+
+}
+
+
+
+
+h1{
+    color: white;
 }
