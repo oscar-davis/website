@@ -33,7 +33,6 @@ function onMouseMove( event ) {
 
 	mouse.x = event.clientX / window.innerWidth;
 	mouse.y = event.clientY / window.innerHeight;
-  console.log(mouse);
   head.rotation.z=(Math.PI/2)+(mouse.x*Math.PI);
   head.rotation.x=(mouse.y*Math.PI/3)-(Math.PI/1.8);
 }
