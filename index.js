@@ -74,7 +74,7 @@ function scene1(){
 	scene.add(ambientLight);
 }
 function loadHeads(){
-    var path = '/resources/cube/';
+    var path = '/resources/cube1/';
     var format = '.jpg';
     var urls = [
       path + 'px' + format, path + 'nx' + format,
