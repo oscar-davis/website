@@ -5,38 +5,15 @@
         <title>oscardavis.co.uk</title>
         <link rel="stylesheet" href="index.css">
         <link rel="shortcut icon" type="image/png" href="resources/faceBW.png"/>
-        <script src="p5.min.js"></script>
-        <script src="addons/p5.dom.min.js"></script>
-        <script src="addons/p5.sound.min.js"></script>
+        <script src="index.js" type="module" charset="utf-8"></script>
+        <script src="/libraries/three.js/three.min.js" charset="utf-8"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="foreground">
-          <h1 style="color:black">portfolio:</h1>
-          <iframe src="https://editor.p5js.org/oscar-davis/embed/CByatIZ18"></iframe>
-          <div>
-          <button>London Underground Audio Model (Pure Data)</button>
-          </div>
-          <div>
-          <button>Wavr: Surfing Weather App (MSW API, Preact)</button>
-          </div>
-          <div>
-          <button>Spotify DJ (Spotify API, React)</button>
-          </div>
-          <div>
-          <button>Music Transcription App (Spotify API, React)</button>
-          </div>
-          <div>
-          <button onclick="location.href='fare_hopper.html';">Fare Hopper: London Underground Platform Game (p5.js)</button>
-          </div>
-          <div>
-          <button onclick="location.href='liveSound.html';">Live Sound Engineering</button>
-          </div>
-          <div>
-          <button onclick="location.href='https://www.mixcloud.com/QuestRadio/stream/';" >Radio Show</button>
-          </div>
-          <div>
-          <button>Music Recording and Mixing</button>
-          </div>
-        </div>
+      <div class="pageGrid">
+        <button class="button" name="button">TEST</button>
+        <div class="visualContainer" id="visualContainer"></div>
+        <button class="button" name="button">TEST</button>
+      </div>
     </body>
 </html>

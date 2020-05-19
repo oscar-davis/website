@@ -1,8 +1,3 @@
-:root {
-    --red: #ff5454; /* powder red */
-    --blue: #84ceff; /* powder blue */
-}
-
 *{
     	 margin:0px auto;
 }
@@ -11,88 +6,37 @@ html, body{
     width: 100%;
     text-align:center;
 }
-
-#header{
-    background-color: var(--blue);
-    text-align: right;
-    padding: 20px;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-	left: 0;
-    z-index: 1;
-    border-bottom-style: solid;
-    border-bottom-color: var(--red);
-    border-bottom-width: 4.6px;
-
+.pageGrid{
+  background: #666666 !important;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
 }
-    .heading{
-        display: inline;
-        margin: 20px;
-        cursor: pointer;
-    }
-    #logo{
-        height:35px;
-        width:auto;
-        padding-right:50%;
-        z-index: 2;
-    }
-
-
-#mainPhoto{
-    background-color: var(--red);
-    width: 100%;
-    padding:0px;
-
-}
-    #text{
-        position: absolute;
-        bottom:20%;
-        left: 47%;
-        color: white;
-        font-size: 30px;
-    }
-        #title{
-            color:var(--red);
-            font-style: oblique;
-            font-weight: bold;
-            font-size: 35px;
-        }
-#face{
-    width: 100%;
-    z-index: -1;
+#visualContainer{
+  display: block;
+  margin:auto;
+  vertical-align: middle;
 }
 
-#bio{
-    background-color: var(--blue);
-    padding: 50px;
-    font-size: 28px;
-    color: white;
-    border-bottom-style: solid;
-    border-bottom-color: var(--red);
-    border-bottom-width: 4.6px;
+.button{
+  background: #666666;
+  color: #000000;
+  border-color: #000000;
+  font-size: 16px;
+  font-family: "Lucida Console", monaco;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid #000000;
+  padding: 16px 64px 16px 64px;
 }
-
-#media{
-    background-color: white;
+.button:hover{
+  background-color:#DDDDDD;
+  transition: background-color 0.2s;
 }
-
-    .video{
-        padding: 30px;
-    }
-
-#footer{
-    background-color: white;
-    font-size: 23px;
-    color: var(--blue);
-    padding-top:70px;
-    padding-bottom:20px;
-
-}
-
-
-
-
-h1{
-    color: white;
+.button:active{
+  border-top: 3px solid #000000;
+  border-left: 3px solid #000000;
 }
