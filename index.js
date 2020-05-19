@@ -38,7 +38,7 @@ function onMouseMove( event ) {
   head.rotation.x=(mouse.y*Math.PI/3)-(Math.PI/1.8);
 }
 window.addEventListener( 'mousemove', onMouseMove, false );
-
+window.addEventListener( 'touchstart', onMouseMove, false );
 ////////////////////
 // SETUP FUNCTION //
 ////////////////////
