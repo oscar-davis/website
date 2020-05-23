@@ -33,8 +33,11 @@ function onMouseMove( event ) {
 
 	mouse.x = event.clientX / window.innerWidth;
 	mouse.y = event.clientY / window.innerHeight;
-  head.rotation.z=(Math.PI/2)+(mouse.x*Math.PI);
   head.rotation.x=(mouse.y*Math.PI/3)-(Math.PI/1.8);
+  if(mouse.x>0.2&&mouse.x<0.8){
+    head.rotation.z=(Math.PI/2)+(mouse.x*Math.PI);
+  }
+
 }
 window.addEventListener( 'mousemove', onMouseMove, false );
 window.addEventListener( 'touchstart', onMouseMove, false );
@@ -44,7 +47,7 @@ window.addEventListener( 'touchstart', onMouseMove, false );
 function initScene(){
 	scene = new THREE.Scene();
 	scene.background = new THREE.Color( 0x666666 );
-	scene.fog = new THREE.Fog( 0x666666, 200, 600 );
+	scene.fog = new THREE.Fog( 0x666666, 0, 2000 );
 
 	renderer = new THREE.WebGLRenderer({antialias:true});
 	// render canvas set to the size of the window
