@@ -27,7 +27,7 @@ animate();
 ////////////////////
 $(window).keydown(function( event ) {
   if ( event.which == 82 ) {// r key pressed
-    console.log("camera: x:"+ Math.round(camera.position.x)+" y:"+Math.round(camera.position.y)+" z:"+Math.round(camera.position.z));
+    console.log("camera: x:"+ Math.round(camera.position.x)+" y:"+Math.round(camera.position.y)+" z:"+Math.round(camera.position.z)+", rotation x: "+ camera.rotation.x);
   }
 });
 function onMouseMove( event ) {
@@ -53,15 +53,15 @@ function initScene(){
 
 	renderer = new THREE.WebGLRenderer({antialias:true,alpha: true});
 	// render canvas set to the size of the window
-	renderer.setSize(window.innerWidth/2, window.innerWidth/2.5);
+	renderer.setSize(window.innerWidth, window.innerHeight-2);
   renderer.setClearColor( 0x000000, 0 ); // the default
 	// append the renderer to the html page
 	$("#canv").append(renderer.domElement);
   // create camera to provide a user's perspective
-	camera = new THREE.PerspectiveCamera( 75, (window.innerWidth/2)/ (window.innerWidth/2.5), 0.1, 2000 );
+	camera = new THREE.PerspectiveCamera( 75, window.innerWidth/ window.innerHeight, 0.1, 2000 );
   // initialise OrbitControls
-  controls = new OrbitControls( camera, renderer.domElement );
-  controls.addEventListener( 'change', render );
+  // controls = new OrbitControls( camera, renderer.domElement );
+  // controls.addEventListener( 'change', render );
 }
 function render() {
     renderer.render( scene, camera );
@@ -72,14 +72,14 @@ function render() {
 //scene 1
 function scene1(){
   // generate reflection cube
-  var path = '/resources/cube1/';
-  var format = '.jpg';
-  var urls = [
+  let path = '/resources/cube1/';
+  let format = '.jpg';
+  let urls = [
     path + 'px' + format, path + 'nx' + format,
     path + 'py' + format, path + 'ny' + format,
     path + 'pz' + format, path + 'nz' + format
   ];
-  var reflectionCube = new THREE.CubeTextureLoader().load( urls );
+  let reflectionCube = new THREE.CubeTextureLoader().load( urls );
   reflectionCube.format = THREE.RGBFormat;
 
   loadTv();
@@ -87,18 +87,20 @@ function scene1(){
   loadHead(reflectionCube);
 
   //position the camera so we can see the whole scene
-	camera.position.x = 0;
-	camera.position.y = 50;
-	camera.position.z = 400;
+	camera.position.x = -50;
+	camera.position.y = -65;
+	camera.position.z = 420;
+
+  camera.rotation.x=0.15155376716593535;
 	// LIGHTS
-	var ambientLight = new THREE.AmbientLight( 0xFFFFFF,2);
+	let ambientLight = new THREE.AmbientLight( 0xFFFFFF,2);
 	scene.add(ambientLight);
 }
 function loadHead(reflectionCube){
-  	var loader1 = new GLTFLoader().setPath( '/resources/head1/' );
+  	let loader1 = new GLTFLoader().setPath( '/resources/head1/' );
   	loader1.load( 'head1.gltf', function ( gltf ) {
   		head = gltf.scene;
-  		head.receiveShadow = true;
+  		head.receiveShadow = false;
   		head.scale.multiplyScalar( 20 );
   		head.rotation.z += 3.1415;
       head.translateX(window.innerHeight/6);
@@ -121,7 +123,25 @@ function loadTv(){
     tvPlane = new THREE.Mesh( geometry, material );
     tvPlane.translateZ(10);
     scene.add( tvPlane );
-  });
+
+  //create tv box
+  // let geometry = new THREE.BoxGeometry( 640,500, 520 );
+  // let cubeMaterials = [
+  //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide}),
+  //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide}),
+  //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide}),
+  //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide}),
+  //   new THREE.MeshBasicMaterial( { map: texture , transparent: true } ),//front
+  //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide})
+  // ];
+  // // Create a MeshFaceMaterial, which allows the cube to have different materials on each face
+  // let material = new THREE.MeshFaceMaterial(cubeMaterials);
+  // cube = new THREE.Mesh( geometry, material );
+  // cube.translateX(-30);
+  // cube.translateY(0);
+  // cube.translateZ(-255);
+  // scene.add( cube );
+});
 }
 
 function loadCube(){
@@ -153,5 +173,5 @@ function animate() {
   renderer.render( scene, camera );
   // update the picking ray with the camera and mouse position
 	raycaster.setFromCamera( headMouse, camera );
-  controls.update();
+  // controls.update();
 }
