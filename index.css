@@ -5,9 +5,9 @@
 html, body{
     width: 100%;
     text-align:center;
+    background: #666666 !important;
 }
 .pageGrid{
-  background: #666666 !important;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -15,10 +15,21 @@ html, body{
   height: 100vh;
   z-index: 10;
 }
-#visualContainer{
+#canv{
+  z-index: -1;
   display: block;
   margin:auto;
   vertical-align: middle;
+}
+#visualContainer{
+}
+#tvFrame{
+  position: absolute;
+  z-index: 1 !important;
+  background-color: transparent;
+  top: 0;
+  right:0;
+  pointer-events: none;
 }
 
 .button{
