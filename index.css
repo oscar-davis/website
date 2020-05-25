@@ -1,37 +1,35 @@
+/*   structural bits   */
 *{
-    	 margin:0px auto;
+    margin: 0px auto;
+    font-family: "Lucida Console", monaco;
 }
-
 html, body{
-    width: 100%;
-    text-align:center;
     background: #666666 !important;
 }
 .pageGrid{
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  width: 100vw;
-  height: 100vh;
-  z-index: 10;
-}
-#canv{
-  z-index: -1;
-  display: block;
-  margin:auto;
-  vertical-align: middle;
-}
-#visualContainer{
-}
-#tvFrame{
-  position: absolute;
-  z-index: 1 !important;
-  background-color: transparent;
-  top: 0;
-  right:0;
-  pointer-events: none;
+  display: grid;
+  grid-template-columns: auto ;
+  grid-template-rows: auto;
 }
 
+/*    grid items    */
+#menu{
+  position: fixed !important;
+  margin: 10px !important;
+  padding: 10px !important;
+  background-color: white;
+  border-color: : white;
+  box-shadow: 2px 2px 15px ;
+}
+#visualContainer{
+  text-align: center;
+}
+.content{
+  text-align: justify;
+  padding: 50px;
+}
+
+/*    button stuff    */
 .button{
   background: #666666;
   color: #000000;

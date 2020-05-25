@@ -35,11 +35,16 @@ function onMouseMove( event ) {
 	// calculate mouse position in normalized device coordinates
 	// (-1 to +1) for both components
 
-	headMouse.x = (event.clientX+(window.innerHeight/6)) / window.innerWidth;
-	headMouse.y = event.clientY / window.innerHeight;
+	headMouse.x = (event.pageX+(window.innerWidth/15)) / window.innerWidth;
+	headMouse.y = event.pageY / window.innerHeight;
   head.rotation.x=(headMouse.y*Math.PI/3)-(Math.PI/1.5);
-  if(headMouse.x>0.2 && headMouse.x<0.87){
+  if(headMouse.x>0.2 && headMouse.x<0.8){
     head.rotation.z=(Math.PI/2)+(headMouse.x*Math.PI);
+      head.rotation.y=(headMouse.y*Math.PI*0.2)-0.2;
+  }
+  else{
+    head.rotation.z=(Math.PI/2)+(headMouse.x*Math.PI);
+      head.rotation.y=(headMouse.y*Math.PI*0.2)-0.2;
   }
 
 }
@@ -53,14 +58,14 @@ function initScene(){
 
 	renderer = new THREE.WebGLRenderer({antialias:true,alpha: true});
 	// render canvas set to the size of the window
-	renderer.setSize(window.innerWidth, window.innerHeight-2);
+	renderer.setSize(700,500);
   renderer.setClearColor( 0x000000, 0 ); // the default
 	// append the renderer to the html page
 	$("#canv").append(renderer.domElement);
   // create camera to provide a user's perspective
-	camera = new THREE.PerspectiveCamera( 75, window.innerWidth/ window.innerHeight, 0.1, 2000 );
+	camera = new THREE.PerspectiveCamera( 75, 700/500, 0.1, 2000 );
   // initialise OrbitControls
-  // controls = new OrbitControls( camera, renderer.domElement );
+  controls = new OrbitControls( camera, renderer.domElement );
   // controls.addEventListener( 'change', render );
 }
 function render() {
@@ -71,6 +76,7 @@ function render() {
 ////////////////////
 //scene 1
 function scene1(){
+   scene.add( new THREE.AxesHelper(200,200,200) );
   // generate reflection cube
   let path = '/resources/cube1/';
   let format = '.jpg';
@@ -87,11 +93,11 @@ function scene1(){
   loadHead(reflectionCube);
 
   //position the camera so we can see the whole scene
-	camera.position.x = -50;
-	camera.position.y = -65;
-	camera.position.z = 420;
+	// camera.position.x = 0;
+	//camera.position.y = -65;
+	camera.position.z = 400;
 
-  camera.rotation.x=0.15155376716593535;
+  //camera.rotation.x=0.15155376716593535;
 	// LIGHTS
 	let ambientLight = new THREE.AmbientLight( 0xFFFFFF,2);
 	scene.add(ambientLight);
@@ -100,11 +106,11 @@ function loadHead(reflectionCube){
   	let loader1 = new GLTFLoader().setPath( '/resources/head1/' );
   	loader1.load( 'head1.gltf', function ( gltf ) {
   		head = gltf.scene;
-  		head.receiveShadow = false;
-  		head.scale.multiplyScalar( 20 );
+  		head.receiveShadow = false
+  		head.scale.multiplyScalar( window.innerHeight/40 );
   		head.rotation.z += 3.1415;
-      head.translateX(window.innerHeight/6);
-      head.translateZ(-window.innerHeight/2);
+      head.translateX(window.innerWidth/15);
+      head.translateZ(-window.innerHeight/3);
       head.translateY(window.innerHeight/4);
   		head.traverse((node) => {
   			if (!node.isMesh) return;
