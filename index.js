@@ -1,11 +1,10 @@
 //colors object
 var colors = {
   about : 'moccasin',
-  spotify : 'cornflowerBlue',
-  web : 'tomato',
-  audio : 'skyBlue',
+  web : 'cornflowerBlue',
+  audio : 'yellowGreen',
   sound : 'aquamarine',
-  radio : 'chocolate',
+  radio : 'sandyBrown',
   live : 'pink'
 };
 $(function() {
@@ -31,7 +30,7 @@ $(function() {
       }
     }
   }
-  $('a').on('click', function() {
+  $('.menuText').on('click', function() {
     changePage(this.href.replace(window.location.origin+'/',''));
   });
 });
