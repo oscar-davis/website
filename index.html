@@ -6,28 +6,25 @@
         <link rel="stylesheet" href="index.css">
         <link rel="shortcut icon" type="image/png" href="resources/faceBW.png"/>
         <script src="index.js" type="module" charset="utf-8"></script>
-        <script src="/libraries/three.js/three.min.js" charset="utf-8"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     </head>
     <body>
       <div class="bodyGrid">
         <div id="menuContainer">
           <div id="menu">
-              <a id="aboutLink" href="#about">about me<a><br>
-              <a id="webLink" href="#web">web coding & UX</a><br>
-              <a id="audioLink" href="#audio">audio coding<a><br>
-              <a id="soundLink" href="#sound">sound design</a><br>
-              <a id="radioLink" href="#radio">radio</a><br>
-              <a id="liveLink" href="#live-sound">live sound</a><br>
+              <a id="aboutLink" class="menuText" href="#about">about me<a><br>
+              <a id="spotifyLink" class="menuText" href="#spotify">Spotify Visualiser<a><br>
+              <a id="webLink" class="menuText" href="#web">web coding & UX</a><br>
+              <a id="audioLink" class="menuText" href="#audio">audio coding<a><br>
+              <a id="soundLink" class="menuText" href="#sound">sound design</a><br>
+              <a id="radioLink" class="menuText" href="#radio">radio</a><br>
+              <a id="liveLink" class="menuText" href="#live-sound">live sound</a><br>
           </div>
           <div id="footer">
             <p>Oscar Davis</p>
             <p>07806547799</p>
             <p>oscartdavis@gmail.com</p>
           </div>
-        </div>
-        <div class="visualContainer" id="visualContainer">
-          <div class="canv" id="canv"></div>
         </div>
         <div class="pageGrid">
           <div id="about" class="content">
@@ -36,38 +33,30 @@
             <img src="/resources/pictureOfMe.jpg" alt="a photo of Oscar" width="500px">
             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
           </div>
+          <div id="spotify" class="content">
+            <h3 class="heading">Spotify Visualiser</h3>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+          </div>
           <div id="web" class="content"></p>
             <h3 class="heading">web coding and user experience design</h3>
             <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
           </div>
           <div id="audio" class="content"></p>
             <h3 class="heading">audio coding</h3>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
           </div>
           <div id="sound" class="content"></p>
               <h3 class="heading">sound design and mixing</h3>
+              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
           </div>
           <div id="radio" class="content"></p>
             <h3 class="heading">radio</h3>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
           </div>
           <div id="live-sound" class="content"></p>
             <h3 class="heading">live sound</h3>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock.</p>
             <div id="imgGrid">
-              <script>
-                // load in images
-                for (var i = 1; i < 20; i++) {
-                  let img = new Image();
-                  $("#imgGrid").append(img);
-                  img.src = "/resources/gigPosters/"+i+".jpg";
-                  img.onload = function(){
-                    if (img.width>img.height) {
-                      img.classList.add("landscape");
-                    }
-                    else{
-                      img.classList.add("portrait");
-                    }
-                  }
-                }
-              </script>
             </div>
           </div>
         </div>
