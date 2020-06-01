@@ -1,11 +1,11 @@
 //colors object
 var colors = {
-  about : 'white',
-  spotify : 'black',
-  web : 'red',
-  audio : 'blue',
-  sound : 'green',
-  radio : 'orange',
+  about : 'moccasin',
+  spotify : 'cornflowerBlue',
+  web : 'tomato',
+  audio : 'skyBlue',
+  sound : 'aquamarine',
+  radio : 'chocolate',
   live : 'pink'
 };
 $(function() {
@@ -45,7 +45,6 @@ function changePage(selection){
   $('#live').hide();
   $(selection).show();
   let colorSelection = selection.replace('#','');
-  console.log(colors[colorSelection]);
   $("html").css("background-color",colors[colorSelection]);
   $("body").css("background-color",colors[colorSelection]);
 }
