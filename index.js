@@ -1,6 +1,22 @@
+//colors object
+var colors = {
+  about : 'white',
+  spotify : 'black',
+  web : 'red',
+  audio : 'blue',
+  sound : 'green',
+  radio : 'orange',
+  live : 'pink'
+};
 $(function() {
   // hide all page sections
-  changePage(window.location.href.replace(window.location.origin+'/',''));
+  let link = window.location.href.replace(window.location.origin+'/','');
+  if(link){
+    changePage(link);
+  }
+  else{
+    changePage('#about');
+  }
   // load in images
   for (var i = 1; i < 20; i++) {
     let img = new Image();
@@ -15,12 +31,10 @@ $(function() {
       }
     }
   }
-  // change background colour on click
   $('a').on('click', function() {
     changePage(this.href.replace(window.location.origin+'/',''));
   });
 });
-
 function changePage(selection){
   $('#about').hide();
   $('#spotify').hide();
@@ -28,6 +42,10 @@ function changePage(selection){
   $('#audio').hide();
   $('#sound').hide();
   $('#radio').hide();
-  $('#live-sound').hide();
+  $('#live').hide();
   $(selection).show();
+  let colorSelection = selection.replace('#','');
+  console.log(colors[colorSelection]);
+  $("html").css("background-color",colors[colorSelection]);
+  $("body").css("background-color",colors[colorSelection]);
 }

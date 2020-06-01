@@ -4,8 +4,9 @@
     font-family: "Lucida Console", monaco;
 }
 html, body{
-    background: #999999 !important;
+    background: #999999;
     scroll-behavior: smooth;
+    transition: 2s;
 }
 .bodyGrid{
   display: grid;
@@ -16,7 +17,7 @@ html, body{
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  transition: 0.2s;
+  transition: 0.2s !important;
 }
 h3{
   font-size: 24pt;
