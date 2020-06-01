@@ -85,7 +85,7 @@ iframe{
 .soundGrid{
   display: grid;
   grid-template-columns: 30% auto;
-  grid-template-rows: auto 800px auto auto 32px 200px auto 32px 200px auto;
+  grid-template-rows: 32px 800px auto auto 32px 200px auto 32px 200px auto;
   grid-gap: 20px;
 }
 .span2{
@@ -96,7 +96,7 @@ iframe{
   padding-right: 20px;
 }
 #mePic{
-  float: right;
+  float: left;
 }
 #imgGrid{
   display: grid;
