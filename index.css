@@ -96,7 +96,7 @@ iframe{
   padding-right: 20px;
 }
 #mePic{
-  float: left;
+  float: right;
 }
 #imgGrid{
   display: grid;
