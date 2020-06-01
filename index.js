@@ -31,10 +31,8 @@ $(window).keydown(function( event ) {
   }
 });
 function onMouseMove( event ) {
-
 	// calculate mouse position in normalized device coordinates
 	// (-1 to +1) for both components
-
 	headMouse.x = (event.pageX+(window.innerWidth/15)) / window.innerWidth;
 	headMouse.y = event.pageY / window.innerHeight;
   head.rotation.x=(headMouse.y*Math.PI/3)-(Math.PI/1.5);
@@ -46,7 +44,6 @@ function onMouseMove( event ) {
     head.rotation.z=(Math.PI/2)+(headMouse.x*Math.PI);
       head.rotation.y=(headMouse.y*Math.PI*0.2)-0.2;
   }
-
 }
 window.addEventListener( 'mousemove', onMouseMove, false );
 window.addEventListener( 'touchstart', onMouseMove, false );
@@ -65,7 +62,7 @@ function initScene(){
   // create camera to provide a user's perspective
 	camera = new THREE.PerspectiveCamera( 75, 700/500, 0.1, 2000 );
   // initialise OrbitControls
-  controls = new OrbitControls( camera, renderer.domElement );
+  // controls = new OrbitControls( camera, renderer.domElement );
   // controls.addEventListener( 'change', render );
 }
 function render() {
@@ -76,7 +73,7 @@ function render() {
 ////////////////////
 //scene 1
 function scene1(){
-   scene.add( new THREE.AxesHelper(200,200,200) );
+   //scene.add( new THREE.AxesHelper(200,200,200) );
   // generate reflection cube
   let path = '/resources/cube1/';
   let format = '.jpg';
@@ -129,25 +126,24 @@ function loadTv(){
     tvPlane = new THREE.Mesh( geometry, material );
     tvPlane.translateZ(10);
     scene.add( tvPlane );
-
-  //create tv box
-  // let geometry = new THREE.BoxGeometry( 640,500, 520 );
-  // let cubeMaterials = [
-  //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide}),
-  //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide}),
-  //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide}),
-  //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide}),
-  //   new THREE.MeshBasicMaterial( { map: texture , transparent: true } ),//front
-  //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide})
-  // ];
-  // // Create a MeshFaceMaterial, which allows the cube to have different materials on each face
-  // let material = new THREE.MeshFaceMaterial(cubeMaterials);
-  // cube = new THREE.Mesh( geometry, material );
-  // cube.translateX(-30);
-  // cube.translateY(0);
-  // cube.translateZ(-255);
-  // scene.add( cube );
-});
+    //create tv box
+    // let geometry = new THREE.BoxGeometry( 640,500, 520 );
+    // let cubeMaterials = [
+    //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide}),
+    //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide}),
+    //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide}),
+    //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide}),
+    //   new THREE.MeshBasicMaterial( { map: texture , transparent: true } ),//front
+    //   new THREE.MeshStandardMaterial({color:0xF01629, opacity:1, side: THREE.DoubleSide})
+    // ];
+    // // Create a MeshFaceMaterial, which allows the cube to have different materials on each face
+    // let material = new THREE.MeshFaceMaterial(cubeMaterials);
+    // cube = new THREE.Mesh( geometry, material );
+    // cube.translateX(-30);
+    // cube.translateY(0);
+    // cube.translateZ(-255);
+    // scene.add( cube );
+  });
 }
 
 function loadCube(){

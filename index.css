@@ -4,25 +4,64 @@
     font-family: "Lucida Console", monaco;
 }
 html, body{
-    background: #666666 !important;
+    background: #999999 !important;
+    scroll-behavior: smooth;
+}
+.bodyGrid{
+  display: grid;
+  grid-template-columns: 240px auto  ;
+  grid-template-rows: auto;
 }
 .pageGrid{
   display: grid;
-  grid-template-columns: auto ;
+  grid-template-columns: auto;
   grid-template-rows: auto;
+  transition: 0.5s;
+}
+h3{
+  font-size: 24pt;
+  font-weight:900;
 }
 
 /*    grid items    */
+#menuContainer{
+  position: sticky;
+  grid-row: span 2;
+}
 #menu{
-  position: fixed !important;
+  position: fixed;
+  left: 0px !important;
   margin: 10px !important;
   padding: 10px !important;
-  background-color: white;
-  border-color: : white;
-  box-shadow: 2px 2px 15px ;
+}
+#footer{
+  position: fixed;
+  left: 0px !important;
+  bottom: 0px !important;
+  margin: 10px !important;
+  padding: 10px !important;
 }
 #visualContainer{
   text-align: center;
+}
+#imgGrid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+}
+img{
+  max-width: 100%;
+  overflow: scroll !important;
+  transition: 0.5s;
+}
+img:hover{
+  transform: scale(1.05);
+}
+.landscape{
+  grid-column: span 2;
+}
+.portrait{
 }
 .content{
   text-align: justify;
