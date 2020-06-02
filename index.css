@@ -31,7 +31,6 @@ iframe{
 /* page structure */
 @media only screen and (max-device-width : 640px) {
   #bodyGrid{
-    display: grid;
     grid-template-columns: auto !important;
     grid-template-rows: auto auto !important;
   }
@@ -119,13 +118,13 @@ iframe{
 .radioGrid{
   display: grid;
   grid-template-columns: 30% auto;
-  grid-template-rows: auto auto repeat(5,minmax(32px,auto) minmax(200px,auto) auto);
+  grid-template-rows: auto auto repeat(6,minmax(32px,auto) minmax(200px,auto) auto);
   grid-gap: 20px;
 }
 .soundGrid{
   display: grid;
   grid-template-columns: 30% auto;
-  grid-template-rows: 32px minmax(200px,auto) auto auto 32px minmax(200px,auto) auto 32px minmax(200px,auto) auto;
+  grid-template-rows: auto auto auto auto repeat(2,minmax(32px,auto) minmax(200px,auto) auto);
   grid-gap: 20px;
 }
 .span2{
