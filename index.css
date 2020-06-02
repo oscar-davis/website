@@ -29,7 +29,7 @@ iframe{
   height: 100%;
 }
 /* page structure */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-device-width : 640px) {
   body {
     background-color: white !important;
   }
