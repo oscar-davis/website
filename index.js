@@ -1,3 +1,4 @@
+if(window.location.search) window.location.replace(location.href.replace(/\?.+/, ""));
 //colors object
 var colors = {
   about : 'moccasin',
